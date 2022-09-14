@@ -5,52 +5,122 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginLeft="50sp"
+    android:layout_marginRight="50sp"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PTS Banks"
-        android:textSize="50sp"
-        android:paddingLeft="33dp"
+        android:layout_weight="3"
+        android:fontFamily="@font/amaranth_bold"
+        android:paddingLeft="15dp"
+        android:text="@string/title"
+        android:textColor="@color/primaryDarkColor"
+        android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_marginTop="25dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Checkings:       $10,000"
-        android:textSize="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:layout_marginTop="25dp"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/money"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Savings:       $50,000"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginBottom="@dimen/bottomMargin"
+        android:layout_weight="2"
+        android:background="@color/textBackround"
+        android:ems="10"
+        android:fontFamily="@font/alata"
+        android:gravity="center"
+        android:hint="$0.00"
+        android:inputType="numberDecimal"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textColorHint="@color/design_default_color_on_secondary"
+        android:textSize="60sp" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/routing_number"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:text="Total Amount:       $1,000,000"
-        android:textColor="@color/red"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_marginBottom="@dimen/bottomMargin"
+        android:layout_weight="1"
+        android:background="@color/textBackround"
+        android:backgroundTint="@color/textBackround"
+        android:ems="10"
+        android:fontFamily="@font/alata"
+        android:hint="Routing Number: "
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:padding="@dimen/textViewPadding"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textColorHint="@color/design_default_color_on_secondary"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/bank_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottomMargin"
+        android:layout_weight="2"
+        android:background="@color/textBackround"
+        android:backgroundTint="@color/design_default_color_on_secondary"
+        android:backgroundTintMode="screen"
+        android:ems="10"
+        android:fontFamily="@font/alata"
+        android:hint="Bank Number:"
+        android:inputType="numberDecimal"
+        android:padding="@dimen/textViewPadding"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textColorHint="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/textViewSize"/>
+    />
+    <EditText
+        android:id="@+id/memo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottomMargin"
+        android:background="@color/textBackround"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Memo:"
+        android:layout_weight="5"
+        android:inputType="textMultiLine"
+        android:fontFamily="@font/alata"
+        android:padding="@dimen/textViewPadding"
+        android:textColorHint="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/textViewSize" />
+
+
+
+    <EditText
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginBottom="@dimen/bottomMargin"
+        android:background="@color/textBackround"
+        android:ems="10"
+        android:fontFamily="@font/alata"
+        android:hint="Date:"
+        android:inputType="date"
+        android:minHeight="48dp"
+        android:padding="@dimen/textViewPadding"
+        android:textColor="@color/design_default_color_on_secondary"
+        android:textColorHint="@color/design_default_color_on_secondary"
+        android:textSize="@dimen/textViewSize"/>
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_weight="1"
+        android:fontFamily="@font/alata"
+        android:text="Send Money"
+        android:textColor="@color/primaryTextColor" />
 
 </LinearLayout>

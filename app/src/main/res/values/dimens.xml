@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="textViewPadding">6dp</dimen>
+    <dimen name="textViewSize">25sp</dimen>
+    <dimen name="bottomMargin">15dp</dimen>
+</resources>
